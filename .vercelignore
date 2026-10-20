@@ -1,0 +1,8 @@
+node_modules
+.next
+*.py
+*.pyc
+__pycache__
+*.bat
+fotos_instagram_mueblesyespacio
+extracted_decorators_styles.txt

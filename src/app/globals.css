@@ -1,0 +1,619 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #777777;
+    font-family: var(--font-lato), sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-montserrat), sans-serif;
+    color: #272727;
+    font-weight: 700;
+  }
+}
+
+/* ==========================================================================
+   DECORATORS TEMPLATE SIGNATURE TYPOGRAPHY & SECTION TITLES
+   ========================================================================== */
+
+/* Left-Aligned Section Title with Decorators Double Line */
+.sec-title {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.sec-title h2 {
+  position: relative;
+  font-size: 32px;
+  color: #272727;
+  padding-bottom: 14px;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.sec-title h2::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  left: 0;
+  bottom: 3px;
+  background-color: #26a422;
+}
+
+.sec-title h2::before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #26a422;
+}
+
+.sec-title .service-link {
+  position: relative;
+  color: #272727;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 1px solid #272727;
+  line-height: 16px;
+  padding: 0;
+  font-family: var(--font-montserrat), sans-serif;
+  transition: all 300ms ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sec-title .service-link:hover {
+  color: #26a422;
+  border-color: #26a422;
+}
+
+/* Centered Section Title with Decorators Double Line */
+.sec-title-four {
+  position: relative;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.sec-title-four h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 34px;
+  color: #272727;
+  padding-bottom: 14px;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.sec-title-four h2::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  left: 50%;
+  margin-left: -35px;
+  bottom: 3px;
+  background-color: #26a422;
+}
+
+.sec-title-four h2::before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  left: 50%;
+  margin-left: -35px;
+  bottom: 0;
+  background-color: #26a422;
+}
+
+/* Sub-title Title Style Three */
+.sec-title-three {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.sec-title-three .sub-title {
+  position: relative;
+  color: #26a422;
+  font-size: 20px;
+  font-style: italic;
+  font-family: var(--font-lato), sans-serif;
+  margin-bottom: 4px;
+}
+
+.sec-title-three h2 {
+  position: relative;
+  font-size: 32px;
+  color: #272727;
+  padding-bottom: 14px;
+  font-weight: 700;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.sec-title-three h2::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  left: 0;
+  bottom: 3px;
+  background-color: #26a422;
+}
+
+.sec-title-three h2::before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #26a422;
+}
+
+/* ==========================================================================
+   DECORATORS BUTTONS
+   ========================================================================== */
+
+.theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  line-height: 24px;
+  border-radius: 2px;
+}
+
+.btn-style-one {
+  padding: 12px 32px;
+  background-color: #26a422;
+  color: #ffffff !important;
+  border: 2px solid #26a422;
+}
+
+.btn-style-one:hover {
+  background-color: #272727;
+  color: #ffffff !important;
+  border-color: #272727;
+}
+
+.btn-style-two {
+  padding: 12px 32px;
+  background-color: #272727;
+  color: #ffffff !important;
+  border: 2px solid #272727;
+}
+
+.btn-style-two:hover {
+  background-color: #26a422;
+  color: #ffffff !important;
+  border-color: #26a422;
+}
+
+.btn-style-outline-white {
+  padding: 12px 32px;
+  background-color: transparent;
+  color: #ffffff !important;
+  border: 2px solid #ffffff;
+}
+
+.btn-style-outline-white:hover {
+  background-color: #26a422;
+  border-color: #26a422;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   WELCOME SECTION DECORATORS OVERLAP BOX
+   ========================================================================== */
+
+.welcome-column-content {
+  position: relative;
+  padding: 50px 36px;
+  background-color: #1f1f1f;
+  z-index: 25;
+}
+
+@media (min-width: 1024px) {
+  .welcome-column-content {
+    margin-top: -65px;
+    margin-right: -25px;
+  }
+}
+
+.welcome-column-content h2 {
+  position: relative;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 15px;
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.welcome-column-content h2::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  left: 0;
+  bottom: 4px;
+  background-color: #26a422;
+}
+
+.welcome-column-content h2::before {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #26a422;
+}
+
+.welcome-column-content h3 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5em;
+  margin: 26px 0 20px 0;
+}
+
+.welcome-column-content h3 span {
+  color: #26a422;
+}
+
+.welcome-column-content .text {
+  color: #bebebe;
+  font-size: 15px;
+  line-height: 26px;
+  margin-bottom: 24px;
+}
+
+/* ==========================================================================
+   SERVICE BLOCK ONE (Welcome Section Side Cards)
+   ========================================================================== */
+
+.service-block-one {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.service-block-one .inner-box {
+  position: relative;
+  padding-left: 80px;
+}
+
+.service-block-one .inner-box .icon-box {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  color: #272727;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  background-color: #f7f7f7;
+  transition: all 400ms ease;
+}
+
+.service-block-one:hover .inner-box .icon-box {
+  border-color: #26a422;
+  color: #26a422;
+  background-color: #f2fbf4;
+}
+
+.service-block-one .inner-box h3 {
+  color: #272727;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: var(--font-montserrat), sans-serif;
+  margin-bottom: 4px;
+}
+
+.service-block-one .inner-box .category {
+  color: #26a422;
+  font-size: 15px;
+  font-style: italic;
+  font-family: var(--font-lato), sans-serif;
+  margin-bottom: 10px;
+}
+
+.service-block-one .inner-box .text {
+  color: #777777;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* ==========================================================================
+   SERVICE BLOCK TWO (Our Best Services - The Signature Hover Animation)
+   ========================================================================== */
+
+.service-block-two {
+  position: relative;
+}
+
+.service-block-two .inner-box {
+  position: relative;
+  padding: 34px 24px 26px 95px;
+  background: #ffffff;
+  border: 1px solid #e9e9e9;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.04);
+  transition: all 500ms ease;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-block-two .inner-box .icon-box {
+  position: absolute;
+  left: 24px;
+  top: 34px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #26a422;
+  z-index: 2;
+  transition: all 400ms ease;
+  border-radius: 2px;
+}
+
+.service-block-two .inner-box h3 {
+  color: #272727;
+  font-size: 19px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  z-index: 2;
+  position: relative;
+  font-family: var(--font-montserrat), sans-serif;
+  transition: color 400ms ease;
+}
+
+.service-block-two .inner-box .text {
+  position: relative;
+  color: #777777;
+  font-size: 14px;
+  line-height: 24px;
+  z-index: 2;
+  transition: color 400ms ease;
+}
+
+.service-block-two .inner-box .read-more {
+  position: relative;
+  color: #272727;
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  z-index: 2;
+  text-transform: uppercase;
+  font-family: var(--font-montserrat), sans-serif;
+  transition: color 400ms ease;
+}
+
+.service-block-two .inner-box .bottom-icon {
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  color: #f0f0f0;
+  pointer-events: none;
+  transition: opacity 400ms ease;
+}
+
+/* Hover State */
+.service-block-two:hover .inner-box {
+  background: #26a422;
+  border-color: #26a422;
+  box-shadow: 0px 10px 25px 0px rgba(38, 164, 34, 0.35);
+}
+
+.service-block-two:hover .inner-box .icon-box {
+  background: #ffffff;
+  color: #26a422;
+}
+
+.service-block-two:hover .inner-box h3,
+.service-block-two:hover .inner-box .text,
+.service-block-two:hover .inner-box .read-more {
+  color: #ffffff;
+}
+
+.service-block-two:hover .bottom-icon {
+  opacity: 0;
+}
+
+/* ==========================================================================
+   DEFAULT PORTFOLIO ITEM (Gallery Masonry with Decorators Overlay)
+   ========================================================================== */
+
+.default-portfolio-item {
+  position: relative;
+}
+
+.default-portfolio-item .inner-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f7f7f7;
+  border: 1px solid #e5e5e5;
+}
+
+.default-portfolio-item .image-box img {
+  display: block;
+  width: 100%;
+  transition: transform 600ms ease;
+}
+
+.default-portfolio-item:hover .image-box img {
+  transform: scale(1.08);
+}
+
+.default-portfolio-item .overlay-one {
+  position: absolute;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border: 5px solid #26a422;
+  text-align: center;
+  transition: all 450ms ease;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 5;
+}
+
+.default-portfolio-item:hover .overlay-one {
+  top: 0;
+  opacity: 1;
+}
+
+.default-portfolio-item .proj-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  color: #26a422;
+  background: #ffffff;
+  font-size: 18px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 300ms ease;
+}
+
+.default-portfolio-item:hover .proj-link:hover {
+  transform: scale(1.15);
+  background: #26a422;
+  color: #ffffff;
+}
+
+.default-portfolio-item .caption-box-one {
+  position: relative;
+  text-align: center;
+}
+
+.default-portfolio-item .caption-box-one h3 {
+  font-size: 17px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.default-portfolio-item .caption-box-one .cat-link {
+  color: #26a422;
+  font-size: 13px;
+  font-style: italic;
+  font-family: var(--font-lato), sans-serif;
+}
+
+/* ==========================================================================
+   SPEC BLOCKS (Characteristics Section)
+   ========================================================================== */
+
+.spec-block {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.spec-block .inner-box {
+  position: relative;
+  padding-left: 68px;
+}
+
+.spec-block .icon-box {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #272727;
+  font-size: 24px;
+  background-color: #f4f4f4;
+  border-radius: 2px;
+  transition: all 400ms ease;
+}
+
+.spec-block:hover .icon-box {
+  background-color: #26a422;
+  color: #ffffff;
+}
+
+.spec-block .inner-box h3 {
+  color: #272727;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-family: var(--font-montserrat), sans-serif;
+  transition: color 400ms ease;
+}
+
+.spec-block:hover .inner-box h3 {
+  color: #26a422;
+}
+
+.spec-block .inner-box .text {
+  color: #777777;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* ==========================================================================
+   CALL TO ACTION & NEWSLETTER BARS
+   ========================================================================== */
+
+.call-to-action-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(20, 20, 20, 0.75);
+}
+
+.newsletter-style-one {
+  position: relative;
+  padding: 50px 0;
+  background-color: #26a422;
+  color: #ffffff;
+}
